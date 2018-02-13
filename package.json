@@ -1,7 +1,7 @@
 {
   "name": "react-native-seed-cbc",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "## Getting started",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,10 +9,18 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": "adanamanya",
+  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adanamanya/React-Native-SEED-Encryption.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adanamanya/React-Native-SEED-Encryption/issues"
+  },
+  "homepage": "https://github.com/adanamanya/React-Native-SEED-Encryption#readme"
 }
