@@ -1,26 +1,44 @@
 {
-  "name": "react-native-seed-cbc",
-  "version": "0.0.1",
-  "description": "## Getting started",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "react-native-seed-cbc",
+  "_id": "react-native-seed-cbc@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-3VjX1UjSrL9XhzWL8omycsRX2ylmwZgU7ekaPZuNWBf+4CPePRldEdGyThcgH6PdwawuCRcKoeSiKOY3J8yzBQ==",
+  "_location": "/react-native-seed-cbc",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-seed-cbc",
+    "name": "react-native-seed-cbc",
+    "escapedName": "react-native-seed-cbc",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-seed-cbc/-/react-native-seed-cbc-1.0.2.tgz",
+  "_shasum": "52b06e1badec74404e1d9ec24338a7973c309546",
+  "_spec": "react-native-seed-cbc",
+  "_where": "D:\\sourcetes\\tesprojectasal",
+  "author": "",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "## Getting started",
   "keywords": [
     "react-native"
   ],
-  "author": "adanamanya",
-  "license": "MIT",
+  "license": "",
+  "main": "index.js",
+  "name": "react-native-seed-cbc",
   "peerDependencies": {
-    "react-native": "^0.41.2",
+    "react-native": "^0.52.0",
     "react-native-windows": "0.41.0-rc.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adanamanya/React-Native-SEED-Encryption.git"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bugs": {
-    "url": "https://github.com/adanamanya/React-Native-SEED-Encryption/issues"
-  },
-  "homepage": "https://github.com/adanamanya/React-Native-SEED-Encryption#readme"
+  "version": "1.0.3"
 }

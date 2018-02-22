@@ -1,5 +1,7 @@
 
-# react-native-seed-cbc
+# react-native-seed-cbc WIP
+
+React Native Plugin to encrypt string based on KISA SEED-CBC(Korea Internet & Security Agency) standarization
 
 ## Getting started
 
@@ -9,15 +11,16 @@
 
 `$ react-native link react-native-seed-cbc`
 
+
 ### Manual installation
 
+### Link .jar library with android studio
 
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-seed-cbc` and add `RNSeedCbc.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNSeedCbc.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+1. Open your project/android folder in android studio
+2. Open android/libs folder 
+3. Select KISACrypto.jar = > Build => Edit Libraries &      Dependencies
+4. add new library => choose KISACrypto.jar
+5. build
 
 #### Android
 
@@ -34,20 +37,56 @@
       compile project(':react-native-seed-cbc')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNSeedCbc.sln` in `node_modules/react-native-seed-cbc/windows/RNSeedCbc.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Seed.Cbc.RNSeedCbc;` to the usings at the top of the file
-  - Add `new RNSeedCbcPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
 
 ## Usage
 ```javascript
 import RNSeedCbc from 'react-native-seed-cbc';
 
-// TODO: What to do with the module?
-RNSeedCbc;
+// encrypt string
+RNSeedCbc.encryption("Place your string here")
 ```
-  
+## Example
+
+  async asd(){
+    const strText = await RNSeedCbc.encryption("asdefgafgakakadakgh");
+    console.log(strText);
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Welcome to React Native! 
+        </Text>
+        <Button
+        onPress={() => this.asd()}
+        title="Learn More"
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
+        />
+        <Text style={styles.instructions}>
+          {instructions}
+        </Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
