@@ -44,12 +44,26 @@ import RNSeedCbc from 'react-native-seed-cbc';
 
 // encrypt string
 RNSeedCbc.encryption("Place your string here")
+// decrypt string
+RNSeedCbc.decryption(your variable)
 ```
 ## Example
+```javascript
+  export default class App extends Component{
+  static contextTypes = {
+    rootTag: PropTypes.number,
+  };
+  componentDidMount() {
+   
+  }
 
   async asd(){
     const strText = await RNSeedCbc.encryption("asdefgafgakakadakgh");
     console.log(strText);
+  }
+  async def(){
+    const dcrText = await RNSeedCbc.decryption(strText.toString());
+    console.log(dcrText);
   }
 
   render() {
@@ -61,6 +75,12 @@ RNSeedCbc.encryption("Place your string here")
         <Button
         onPress={() => this.asd()}
         title="Learn More"
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
+        />
+        <Button
+        onPress={() => this.def()}
+        title="decrypt"
         color="#841584"
         accessibilityLabel="Learn more about this purple button"
         />
@@ -90,3 +110,4 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+```

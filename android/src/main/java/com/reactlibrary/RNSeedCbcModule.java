@@ -80,13 +80,14 @@ public class RNSeedCbcModule extends ReactContextBaseJavaModule {
   
 }
 
-  public static String decryption(String strText) {
-  if(strText == null || strText.equals("")) return "";
+public void decryption(String strText, Promise promise) {
+  
+if(strText == null || strText.equals("")) return "";
 
 byte[] cipherText = new java.math.BigInteger(strText.trim(), 16).toByteArray();
 byte[] plainText = new byte[144];
 int outputTextLen = 0;
-
+WritableMap map = Arguments.createMap();
 SEEDCBC seed = new SEEDCBC();
 seed.init(SEEDCBC.DEC, key, iv);
 
@@ -98,8 +99,11 @@ plainText, 0);
 seed.close(plainText, outputTextLen);
 
 strText = new String(plainText).trim();
+map.putString("strText", strText);
+  promise.resolve(map);
+Log.d("test", strText);
 
-return strText;
+// return strText;
 }
 
 
